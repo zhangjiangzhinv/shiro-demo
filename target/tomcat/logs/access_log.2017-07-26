@@ -1,0 +1,5 @@
+0:0:0:0:0:0:0:1 - - [26/Jul/2017:17:21:02 +0800] "GET /shiro-demo HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [26/Jul/2017:17:21:03 +0800] "GET /shiro-demo/ HTTP/1.1" 200 488 http-bio-8080-exec-2 730
+0:0:0:0:0:0:0:1 - - [26/Jul/2017:17:21:03 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-4 0
+0:0:0:0:0:0:0:1 - - [26/Jul/2017:17:21:03 +0800] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 - http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [26/Jul/2017:17:21:03 +0800] "GET /apple-touch-icon.png HTTP/1.1" 404 - http-bio-8080-exec-7 0
