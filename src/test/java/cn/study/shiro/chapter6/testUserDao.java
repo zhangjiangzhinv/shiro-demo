@@ -17,7 +17,6 @@ public class testUserDao extends TestCase {
 		System.out.println(currentPath+"/n"+WEBINFPath+"/n"+configPath);
 		ApplicationContext context = new ClassPathXmlApplicationContext(configPath);
 		UserServiceImpl userServiceImpl  = (UserServiceImpl)context.getBean("userService");
-		userServiceImpl.testUserDaoCall();
 	}
 
 }

@@ -9,10 +9,10 @@
 <body>
 This page is for logining！！！
 <form action="/login" method="post">
-username:<input type="text" name="username">
-password:<input type="text" name="password">
-<input type="submit" name="login">
-<input type="reset" name="reset">
+username:<input type="text" name="username"/>
+password:<input type="text" name="password"/>
+<input type="submit" name="login"/>
+<input type="reset" name="reset"/>
 </form>
 </body>
 </html>

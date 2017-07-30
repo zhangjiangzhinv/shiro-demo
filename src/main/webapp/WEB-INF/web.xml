@@ -6,16 +6,28 @@
 
 	<display-name>Archetype Created Web Application</display-name>
 	
-	<!-- 设置根上下文配置文件位置 -->
+	<!-- 设置spring Ioc容器的配置文件的位置 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:applicationContext.xml</param-value>
 	</context-param>
-	
+	<!-- shiro配置文件默认在classpath根目录或者WEB-INF根目录下。可以单独设置，也可以不单独设置而使用默认 -->
+	<!-- 此配置可省略 -->
+	<context-param>
+	    <param-name>shiroConfigLocations</param-name>
+	    <param-value>classpath:shiro.ini</param-value>
+	</context-param>	
+	<!-- 该监听器来自于spring，用于为web项目启动spring的IoC容器，用以完成和web相关的bean的注入 -->
+	<!--  
+	<listener>
+   		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  	</listener>
+  	-->
+    <!-- 该监听器来自于shiro，用于初始化shiro的WebEnvironment实例，并使该实例在ServletContext中可用 -->
 	<listener>
 		<listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
 	</listener>
-
+	<!-- shiro的过滤器 -->
 	<filter>
 		<filter-name>ShiroFilter</filter-name>
 		<filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>	
@@ -31,10 +43,10 @@
 	
 	<error-page>
 	    <error-code>401</error-code>
-	    <location>/page/error/401.html</location>
+	    <location>/jsp/error/401.html</location>
   	</error-page>
   	
 	<welcome-file-list>
-		<welcome-file>/login.jsp</welcome-file>
+		<welcome-file>/jsp/login.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

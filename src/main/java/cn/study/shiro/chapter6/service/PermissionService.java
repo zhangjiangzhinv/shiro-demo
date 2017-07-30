@@ -1,6 +1,6 @@
 package cn.study.shiro.chapter6.service;
 
-import java.security.acl.Permission;
+import cn.study.shiro.chapter6.entity.Permission;
 
 public interface PermissionService {
 	public Permission createPermission(Permission permission);
